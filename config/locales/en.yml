@@ -1,0 +1,6 @@
+# English strings go here for Rails i18n
+en:
+  # my_label: "My label"
+  allow_sort_category_tree: "Categorise"
+  disable_article_summaries: "Disable summary"
+  title_mail_reactions: "Email configurations"

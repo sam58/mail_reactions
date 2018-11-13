@@ -1,0 +1,5 @@
+---
+ru:
+  allow_sort_category_tree: "Категоризация"
+  disable_article_summaries: "Зпрет суммаризации"
+  title_mail_reactions: "Email конфигурация"

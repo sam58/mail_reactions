@@ -1,0 +1,2 @@
+module MailReactionsHelper
+end
