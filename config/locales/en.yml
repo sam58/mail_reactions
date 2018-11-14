@@ -3,4 +3,11 @@ en:
   # my_label: "My label"
   allow_sort_category_tree: "Categorise"
   disable_article_summaries: "Disable summary"
-  title_mail_reactions: "Email configurations"
+  title_mail_reactions: "Input Emails processor"
+
+  label_mail_reactions_new: "New"
+
+  field_mail:    "eMail"
+  field_cron:    "Schedule(cron)"
+  field_project: "In Projects"
+  field_active:  "Is Active"

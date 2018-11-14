@@ -1,21 +1,33 @@
-<h2><%=l(:label_information_plural)%></h2>
+<!-- кнопка добавить -->
+<div class="contextual">
+  <%= link_to l(:label_mail_reactions_new), { :action => 'add'}, :class => 'icon icon-add' %>
+</div>
 
-<p><strong><%= Redmine::Info.versioned_name %></strong></p>
+<%= title l(:title_mail_reactions) %> <!-- замена <h2>title</h2> Более правильно т.к общее для всех. Хотя и время на генерацию -->
 
 <table class="list">
-  <tr>
-    <td class="name"><%#= label.is_a?(Symbol) ? l(label) : label %></td>
-  </tr>
-  <%# @checklist.each do |label, result| %>
-<!--    <tr>-->
-<!--      <td class="name"><%#= label.is_a?(Symbol) ? l(label) : label %></td>-->
-<!--      <td class="tick"><span class="icon-only <%#= (result ? 'icon-ok' : 'icon-error') %>"></span></td>-->
-<!--    </tr>-->
-  <%# end %>
+  <thead>
+    <tr>
+      <th><%=l(:field_mail)%></th>
+      <th><%=l(:field_cron)%></th>
+      <th><%=l(:field_active)%></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <% for source in @mail_sources %>
+    <tr id="@mail_sources-<%= source.id %>">
+      <td class="name"><%= link_to(source.inputMail, :action => 'edit', :id => source)%></td>
+      <td><%= source.cron %></td>
+      <td><%= source.active %></td>
+      <td></td>
+<!--      <td class="buttons">-->
+        <%#= link_to l(:button_test), try_connection_auth_source_path(source), :class => 'icon icon-test' %>
+        <%#= delete_link auth_source_path(source) %>
+<!--      </td>-->
+    </tr>
+  <%end %>
+
 </table>
-<br />
-<div class="box">
-  <pre><%= Redmine::Info.environment %></pre>
-</div>
 
 <% html_title(l(:label_information_plural)) -%>

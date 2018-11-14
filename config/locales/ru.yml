@@ -2,4 +2,11 @@
 ru:
   allow_sort_category_tree: "Категоризация"
   disable_article_summaries: "Зпрет суммаризации"
-  title_mail_reactions: "Email конфигурация"
+  title_mail_reactions: "Обработка входящих Email'ов"
+
+  label_mail_reactions_new: "Добавить"
+
+  field_mail:    "eMail"
+  field_cron:    "Расписание(cron)"
+  field_project: "В проектах"
+  field_active:  "Активно"
