@@ -4,8 +4,10 @@ en:
   allow_sort_category_tree: "Categorise"
   disable_article_summaries: "Disable summary"
   title_mail_reactions: "Input Emails processor"
+  title_mail_reactions_add: "New Input eMail Setup"
 
   label_mail_reactions_new: "New"
+
 
   field_mail:    "eMail"
   field_cron:    "Schedule(cron)"

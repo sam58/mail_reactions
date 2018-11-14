@@ -3,6 +3,7 @@ ru:
   allow_sort_category_tree: "Категоризация"
   disable_article_summaries: "Зпрет суммаризации"
   title_mail_reactions: "Обработка входящих Email'ов"
+  title_mail_reactions_add: "Новая настройка входящей почты"
 
   label_mail_reactions_new: "Добавить"
 

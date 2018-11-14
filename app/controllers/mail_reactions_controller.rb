@@ -17,7 +17,11 @@ class MailReactionsController < ApplicationController
   end
 
   def add
-    redirect_to :action => 'index'
+  end
+
+  def edit
+    puts '123'
+    redirect_to action: 'index'
   end
 
   def remove
@@ -33,10 +37,6 @@ class MailReactionsController < ApplicationController
   end
 
   def show
-  end
-
-  def edit
-    redirect_to :action => 'index'
   end
 
   def update
