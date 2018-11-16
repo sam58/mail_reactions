@@ -1,0 +1,9 @@
+<%= title [l(:title_mail_reactions), mail_reactions_path],  l(:title_mail_reactions_new)%>
+
+<%= labelled_form_for @mail_record, :as => :mail_record, :url => mail_reactions_path, :html => {:id => 'mail_records_form'} do |f| %>
+  <%#= hidden_field_tag 'type', @auth_source.type %>
+  <%= render :partial =>  "form_#{@mail_record.class.name.underscore}", :locals => { :f => f } %>
+
+<!--  E:\dev\RubyProjects\redmine\plugins\mail_reactions\app\views\mail_reactions\_form_mail_record.html.erb-->
+  <%= submit_tag l(:button_create) %>
+<% end %>

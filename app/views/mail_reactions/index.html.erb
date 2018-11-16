@@ -1,6 +1,6 @@
 <!-- кнопка добавить -->
 <div class="contextual">
-  <%= link_to l(:label_mail_reactions_new), { :action => 'add'}, {:class => 'icon icon-add'} %>
+  <%= link_to l(:label_mail_reactions_new), { :action => 'new'}, {:class => 'icon icon-add'} %>
 </div>
 
 <%= title l(:title_mail_reactions) %> <!-- замена <h2>title</h2> Более правильно т.к общее для всех. Хотя и время на генерацию -->
@@ -17,7 +17,7 @@
 
   <% for source in @mail_sources %>
     <tr id="@mail_sources-<%= source.id %>">
-      <td class="name"><%= link_to source.inputMail, {:action => 'edit', :id => source}, :method => :post %></td>
+      <td class="name"><%= link_to source.inputMail, {:action => 'edit', :id => source}, :method => :get %></td>
       <td><%= source.cron %></td>
       <td><%= source.active %></td>
       <td></td>

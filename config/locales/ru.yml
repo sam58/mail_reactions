@@ -2,10 +2,13 @@
 ru:
   allow_sort_category_tree: "Категоризация"
   disable_article_summaries: "Зпрет суммаризации"
+
   title_mail_reactions: "Обработка входящих Email'ов"
-  title_mail_reactions_add: "Новая настройка входящей почты"
+  title_mail_reactions_new: "Новая настройка входящей почты"
 
   label_mail_reactions_new: "Добавить"
+
+  notice_successful_create: "Задача обработки входящей почты создана успешно"
 
   field_mail:    "eMail"
   field_cron:    "Расписание(cron)"

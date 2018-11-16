@@ -9,6 +9,8 @@ en:
   label_mail_reactions_new: "New"
 
 
+  notice_successful_create: "Input mail task successful_create"
+
   field_mail:    "eMail"
   field_cron:    "Schedule(cron)"
   field_project: "In Projects"

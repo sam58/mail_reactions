@@ -6,6 +6,7 @@ Redmine::Plugin.register :mail_reactions do
   url 'http://example.com/path/to/plugin'
   author_url 'http://example.com/about'
 
+
   requires_redmine :version_or_higher => '3.3.0'
 
   settings :default => {
