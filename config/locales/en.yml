@@ -7,6 +7,7 @@ en:
   title_mail_reactions_add: "New Input eMail Setup"
 
   label_mail_reactions_new: "New"
+  title_mail_reactions_edit: "Edit"
 
 
   notice_successful_create: "Input mail task successful_create"

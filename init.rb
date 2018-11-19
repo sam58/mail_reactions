@@ -2,7 +2,7 @@ Redmine::Plugin.register :mail_reactions do
   name 'Mail Reactions plugin'
   author 'SAM58'
   description 'This is a plugin for Redmine. Create reaction for input emails'
-  version '0.0.1'
+  version '0.0.3'
   url 'http://example.com/path/to/plugin'
   author_url 'http://example.com/about'
 

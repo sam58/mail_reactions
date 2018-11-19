@@ -12,6 +12,7 @@ class MailReactionsController < ApplicationController
 
   #служебка по созданию-заполнению записей, которые будут редактироваться
   before_action :build_new_mail_record, :only => [:new, :create]
+  before_action :find_record_mail, :only => [:edit, :update, :test_connection, :destroy]
   #require_sudo_mode :update, :destroy #запросит еще раз пароль перед указанными потенциально опасными операциями
 
   def index
@@ -33,8 +34,6 @@ class MailReactionsController < ApplicationController
   end
 
   def edit
-    puts '!!!!!!!!!!!!!!!editeditediteditediteditediteditediteditediteditediteditediteditediteditediteditediteditedit'
-    # redirect_to action: 'index'
   end
 
   def show
@@ -42,6 +41,8 @@ class MailReactionsController < ApplicationController
 
 
   def delete
+    puts "delete"
+    render :action => 'index'
   end
 
 
@@ -49,10 +50,12 @@ class MailReactionsController < ApplicationController
   end
 
   def destroy
+    puts "destroy"
+    render :action => 'index'
   end
 
 
-  #
+  #Вызывается при новой записи для предзаполнения объекта редактирования
   def build_new_mail_record
     # @mail_record = MailRecord.new_subclass_instance(params[:type] || 'IMAP')
     @mail_record = MailRecord.new
@@ -61,5 +64,12 @@ class MailReactionsController < ApplicationController
     else
       render_404
     end
+  end
+
+  #ищет записи для предзаполнения по изменениям
+  def find_record_mail
+    @mail_record = MailRecord::find(params[:id])
+  rescue ActiveRecord::RecordNotFound
+    render_404
   end
 end

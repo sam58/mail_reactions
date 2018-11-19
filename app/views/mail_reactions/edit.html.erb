@@ -1,1 +1,8 @@
-editediteditediteditediteditediteditedit
+<%= title [l(:title_mail_reactions), mail_reactions_path],  l(:title_mail_reactions_edit)%>
+
+  <%= labelled_form_for @mail_record, :as => :mail_record, :url => mail_reactions_path(@mail_record), :html => {:id => 'mail_records_form'} do |f| %>
+    <%#= hidden_field_tag 'type', @auth_source.type %>
+    <%= render :partial =>  "form_#{@mail_record.class.name.underscore}", :locals => { :f => f } %>
+
+    <%= submit_tag l(:button_save) %>
+<% end %>

@@ -38,8 +38,8 @@ class MailRecord < ActiveRecord::Base
                   'active'
                   'type'
 
-  # validates_presence_of  :inputMail, :cron
-  # validates_format_of :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create
+   validates_presence_of  :email, :cron, :active
+   validates_format_of :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: [:create, :edit]
 
 
 end

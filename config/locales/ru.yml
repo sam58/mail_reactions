@@ -7,6 +7,7 @@ ru:
   title_mail_reactions_new: "Новая настройка входящей почты"
 
   label_mail_reactions_new: "Добавить"
+  title_mail_reactions_edit: "Редактировать"
 
   notice_successful_create: "Задача обработки входящей почты создана успешно"
 

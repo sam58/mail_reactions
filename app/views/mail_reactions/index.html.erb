@@ -12,19 +12,21 @@
       <th><%=l(:field_cron)%></th>
       <th><%=l(:field_active)%></th>
       <th></th>
+      <th></th>
     </tr>
   </thead>
 
   <% for source in @mail_sources %>
-    <tr id="@mail_sources-<%= source.id %>">
-      <td class="name"><%= link_to source.inputMail, {:action => 'edit', :id => source}, :method => :get %></td>
+    <tr id="mail_sources-<%= source.id %>">
+      <td class="name"><%= link_to source.email, {:action => 'edit', :id => source}%></td>
       <td><%= source.cron %></td>
       <td><%= source.active %></td>
       <td></td>
-<!--      <td class="buttons">-->
+      <td class="buttons">
         <%#= link_to l(:button_test), try_connection_auth_source_path(source), :class => 'icon icon-test' %>
-        <%#= delete_link auth_source_path(source) %>
-<!--      </td>-->
+        <%= link_to :delete, {:action => 'destroy', :id => source}, {data: { confirm: "Are you sure?" }} %>
+        <%#= delete_link mail_reactions_path(source) %>
+      </td>
     </tr>
   <%end %>
 
